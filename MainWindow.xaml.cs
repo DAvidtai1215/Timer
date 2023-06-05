@@ -41,9 +41,15 @@ namespace Timer
             // 設定分鐘下拉選單的選單內容
             cmbMin.ItemsSource = minutes;
             // 設定「時鐘」計時器  
+            DispatcherTimer timer = new DispatcherTimer();  //宣告計時器
+            timer.Interval = TimeSpan.FromSeconds(1);       // 這個計時器設定每一個刻度為1秒
+            timer.Tick += new EventHandler(timer_tick);     // 每一個時間刻度設定一個小程序timer_tick
+            timer.Start();                                  // 啟動這個計時器
+            timer.Stop();                                   // 停止這個計時器
             timer.Interval = TimeSpan.FromSeconds(1);   // 這個計時器設定每一個刻度為1秒
             timer.Tick += new EventHandler(timer_tick); // 每一個時間刻度設定一個小程序timer_tick
             timer.Start(); // 啟動這個計時器
+
         }
         // timer_tick事件：每一秒執行一次
         private void timer_tick(object sender, EventArgs e)
