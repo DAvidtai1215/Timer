@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Timer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="213" Margin="27,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="619"/>
-        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="27,247,362,114" RenderTransformOrigin="0.5,0.5">
+        Title="簡易時鐘" Height="450" Width="800" Icon="/clock.png" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-5">
+        <TextBox x:Name="txtTime" HorizontalAlignment="Left" Height="101" Margin="27,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="619" TextAlignment="Center" FontSize="72"/>
+        <TextBox x:Name="txtDate" TextWrapping="Wrap" Text="TextBox" Margin="27,135,362,219" RenderTransformOrigin="0.5,0.5" FontSize="72">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -18,7 +18,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="456,247,158,114" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="txtWeekDay" TextWrapping="Wrap" Text="TextBox" Margin="459,135,155,220" RenderTransformOrigin="0.5,0.5" FontSize="72">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,8 +28,11 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button Content="Button" HorizontalAlignment="Left" Height="31" Margin="27,329,0,0" VerticalAlignment="Top" Width="81"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="31" Margin="113,329,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button x:Name="btnSetAlert" Content="設定鬧鐘" HorizontalAlignment="Left" Height="31" Margin="27,228,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button x:Name="btnCancelAlert" Content="取消鬧鐘" HorizontalAlignment="Left" Height="31" Margin="113,228,0,0" VerticalAlignment="Top" Width="81"/>
+        <ComboBox x:Name="cmbHour" HorizontalAlignment="Left" Height="31" Margin="274,228,0,0" VerticalAlignment="Top" Width="62"/>
+        <ComboBox x:Name="cmbMin" HorizontalAlignment="Left" Height="31" Margin="341,228,0,0" VerticalAlignment="Top" Width="59"/>
+        <MediaElement x:Name="meSound" Height="100" Width="100" Margin="507,243,193,92" Source="/alert.wav" Volume="1"/>
 
     </Grid>
 </Window>
