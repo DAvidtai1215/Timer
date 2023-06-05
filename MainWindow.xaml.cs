@@ -69,5 +69,21 @@ namespace Timer
                 timerAlert.Stop(); // 停止鬧鐘計時器
             }
         }
+
+        private void btnSetAlert_Click(object sender, RoutedEventArgs e)
+        {
+            timerAlert.Start(); // 啟動鬧鐘計時器
+            btnSetAlert.IsEnabled = false;
+            btnCancelAlert.IsEnabled = true;
+            strSelectTime = cmbHour.SelectedItem + ":" + cmbMin.SelectedItem; // 擷取小時和分鐘的下拉選單文字，用來設定鬧鐘時間
+        }
+
+        private void btnCancelAlert_Click(object sender, RoutedEventArgs e)
+        {
+            meSound.LoadedBehavior = MediaState.Stop; // 關閉鬧鐘聲音
+            timerAlert.Stop(); // 停止鬧鐘計時器
+            btnSetAlert.IsEnabled = true;
+            btnCancelAlert.IsEnabled = false;
+        }
     }
 }

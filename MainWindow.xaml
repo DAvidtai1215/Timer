@@ -28,8 +28,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="btnSetAlert" Content="設定鬧鐘" HorizontalAlignment="Left" Height="31" Margin="27,260,0,0" VerticalAlignment="Top" Width="81"/>
-        <Button x:Name="btnCancelAlert" Content="取消鬧鐘" HorizontalAlignment="Left" Height="31" Margin="116,260,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button x:Name="btnSetAlert" Content="設定鬧鐘" HorizontalAlignment="Left" Height="31" Margin="27,260,0,0" VerticalAlignment="Top" Width="81" Click="btnSetAlert_Click"/>
+        <Button x:Name="btnCancelAlert" Content="取消鬧鐘" HorizontalAlignment="Left" Height="31" Margin="116,260,0,0" VerticalAlignment="Top" Width="81" Click="btnCancelAlert_Click"/>
         <ComboBox x:Name="cmbHour" HorizontalAlignment="Left" Height="31" Margin="268,260,0,0" VerticalAlignment="Top" Width="62"/>
         <ComboBox x:Name="cmbMin" HorizontalAlignment="Left" Height="31" Margin="335,260,0,0" VerticalAlignment="Top" Width="59"/>
         <MediaElement x:Name="meSound" Height="100" Width="100" Margin="559,260,195,124" Source="/alert.wav" Volume="1"/>
