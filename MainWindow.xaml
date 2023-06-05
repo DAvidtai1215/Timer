@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="213" Margin="27,24,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="619"/>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="27,247,362,114" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.218"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.401"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox TextWrapping="Wrap" Text="TextBox" Margin="456,247,158,114" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-1.218"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.401"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button Content="Button" HorizontalAlignment="Left" Height="31" Margin="27,329,0,0" VerticalAlignment="Top" Width="81"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="31" Margin="113,329,0,0" VerticalAlignment="Top" Width="81"/>
+
     </Grid>
 </Window>
